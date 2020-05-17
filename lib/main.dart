@@ -27,15 +27,15 @@ class _MainPageState extends State<MainPage> {
   var data;
   int cases,active,recovered,deaths;
   Future getData() async {
-    http.Response response = await http.get("https://corona.lmao.ninja/v2/countries");
+    http.Response response = await http.get("https://corona.lmao.ninja/v2/countries/India?yesterday&strict&query%20");
     if(response.statusCode == 200) {
       String dataDATA=response.body;
       data = json.decode(dataDATA);
       setState(() {
-        cases = data[93]['cases'];
-        active = data[93]['active'];
-        recovered = data[93]['recovered'];
-        deaths = data[93]['deaths'];
+        cases = data['cases'];
+        active = data['active'];
+        recovered = data['recovered'];
+        deaths = data['deaths'];
       });
     }
   }

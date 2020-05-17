@@ -32,10 +32,10 @@ class _MainPageState extends State<MainPage> {
       String dataDATA=response.body;
       data = json.decode(dataDATA);
       setState(() {
-        cases = data[92]['cases'];
-        active = data[92]['active'];
-        recovered = data[92]['recovered'];
-        deaths = data[92]['deaths'];
+        cases = data[93]['cases'];
+        active = data[93]['active'];
+        recovered = data[93]['recovered'];
+        deaths = data[93]['deaths'];
       });
     }
   }

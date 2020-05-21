@@ -1,4 +1,4 @@
-# flutternewcovid
+# COVID-19 India
 
 A new Flutter application which tells total number of corona patients in India.
 On your location based, it tells number of cases in your locality.

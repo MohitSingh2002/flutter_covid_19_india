@@ -30,7 +30,7 @@ class _CountryDataState extends State<CountryData> {
       body: SafeArea(
         child: ListView.builder(
             itemCount: countryData == null ? 0 : countryData.length,
-            itemBuilder: (context, index){
+            itemBuilder: (context, index) {
               return Card(
                 child: Row(
                   children: <Widget>[
@@ -44,8 +44,8 @@ class _CountryDataState extends State<CountryData> {
                         Text(
                           countryData[index]['country'].toString(),
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 10,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 15,
                             color: Colors.black,
                           ),
                         ),

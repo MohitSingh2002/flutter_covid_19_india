@@ -1,7 +1,7 @@
 name: flutternewcovid
 description: A new Flutter application.
 
-version: 1.0.0+1
+version: 1.0.0+3
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -14,6 +14,7 @@ dependencies:
   geolocator: ^5.3.1
   geocoder: ^0.2.1
   flutter_spinkit: ^4.1.2+1
+  flutter_dialogflow: ^0.1.2
 
   cupertino_icons: ^0.1.3
 
@@ -27,6 +28,8 @@ flutter:
 
   assets:
     - images/android_singh.PNG
+    - images/bot.png
+    - assets/flutter-new-covid-hgrefx-5121a4128e3d.json
 
   fonts:
   - family: Girassol
@@ -36,3 +39,11 @@ flutter:
   - family: LexendGiga
     fonts:
     - asset: fonts/LexendGiga-Regular.ttf
+
+  - family: PlayfairDisplay
+    fonts:
+    - asset: fonts/PlayfairDisplay-Regular.ttf
+
+  - family: Staatliches
+    fonts:
+    - asset: fonts/Staatliches-Regular.ttf

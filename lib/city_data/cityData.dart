@@ -38,7 +38,6 @@ class _CityDataState extends State<CityData> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo.shade100,
       body: SafeArea(
         child: Column(
           children: <Widget>[

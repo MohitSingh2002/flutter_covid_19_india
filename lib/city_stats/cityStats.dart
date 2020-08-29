@@ -148,7 +148,6 @@ class _CityStatsState extends State<CityStats> {
   Widget build(BuildContext context) {
     loadData();
     return Scaffold(
-      backgroundColor: Colors.indigo.shade100,
       appBar: AppBar(
         backgroundColor: Colors.red.shade200,
         title: Text(

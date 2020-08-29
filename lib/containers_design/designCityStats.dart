@@ -22,8 +22,9 @@ class DesignCityStats extends StatelessWidget {
             type,
             style: TextStyle(
               fontSize: 20,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w900,
               color: typeColor,
+              fontFamily: 'Staatliches',
             ),
           ),
           SizedBox(

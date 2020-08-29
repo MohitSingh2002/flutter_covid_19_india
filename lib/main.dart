@@ -8,6 +8,8 @@ import 'package:flutternewcovid/city_stats/cityStats.dart';
 import 'package:flutternewcovid/location_finder/locationFinder.dart';
 import 'package:flutternewcovid/global_stats/globalStats.dart';
 import 'package:flutternewcovid/faqs/faqs.dart';
+import 'package:flutternewcovid/chatbot/chatbot.dart';
+
 
 void main() {
   runApp(MaterialApp(
@@ -27,15 +29,15 @@ class _MainPageState extends State<MainPage> {
   var data;
   int cases,active,recovered,deaths;
   Future getData() async {
-    http.Response response = await http.get("https://corona.lmao.ninja/v2/countries");
+    http.Response response = await http.get("https://corona.lmao.ninja/v2/countries/India?yesterday&strict&query%20");
     if(response.statusCode == 200) {
       String dataDATA=response.body;
       data = json.decode(dataDATA);
       setState(() {
-        cases = data[92]['cases'];
-        active = data[92]['active'];
-        recovered = data[92]['recovered'];
-        deaths = data[92]['deaths'];
+        cases = data['cases'];
+        active = data['active'];
+        recovered = data['recovered'];
+        deaths = data['deaths'];
       });
     }
   }
@@ -168,6 +170,23 @@ class _MainPageState extends State<MainPage> {
                   ],
                 ),
               ],
+            ),
+          ),
+          Container(
+            alignment: Alignment.bottomRight,
+            margin: EdgeInsets.all(10),
+            child: FloatingActionButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Chatbot()));
+              },
+              tooltip: 'ChatBot',
+              elevation: 4.0,
+              backgroundColor: Colors.red.shade200,
+              child: Center(
+                child: Icon(
+                  Icons.message,
+                ),
+              ),
             ),
           ),
         ],

@@ -29,7 +29,6 @@ flutter:
   assets:
     - images/android_singh.PNG
     - images/bot.png
-    - assets/flutter-new-covid-hgrefx-5121a4128e3d.json
 
   fonts:
   - family: Girassol
